@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MosadiTshwene Villa</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css/style.css">
+  <style>
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+    :root {
+      --cream-white: #f5f3ef;
+      --charcoal-blue: #2c3e50;
+      --accent: #8e735b;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Open Sans', sans-serif;
+    }
+    body {
+      background-color: var(--cream-white);
+      color: var(--charcoal-blue);
+      line-height: 1.6;
+    }
+    header {
+      background-color: var(--charcoal-blue);
+      color: white;
+      padding: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header img {
+      height: 80px;
+    }
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: cornflowerblue;
+      font-weight: bold;
+    }
+    .hero {
+      background: url('villa.jpg') no-repeat center center/cover;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-family: 'DM Serif Display', serif;
+      background: rgba(44, 62, 80, 0.7);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+    }
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .section h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+  .Rooms{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+      gap: 1.5rem;
+      margin-top: 2rem;
+  }
+
+  .Rooms img {
+  width: 100%;        
+  height: 250px;      
+  object-fit: cover;   
+  border-radius: 12px; 
+}
+  
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+    }
+   .image-gallery img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Space between images */
+  margin: 40px 0;
+}
+
+.gallery img {
+  width: 100%;
+  height: 250px;       /* Same height for all */
+  object-fit: cover;   /* Keeps proportions, crops edges if needed */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Optional styling */
+  transition: transform 0.3s ease; /* Fancy hover effect */
+}
+
+.gallery img:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+    footer {
+      background-color: var(--charcoal-blue);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
+    .button {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      margin-top: 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+  
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease-out;
+  }
+
+html {
+  scroll-behavior: smooth;
+}
+
+  .fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  #backToTop {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 50%;
+    display: none;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+
+  #backToTop:hover {
+    background: #333;
+  }
+
+  .zoom-img {
+    transition: transform 0.4s ease;
+    cursor: pointer;
+  }
+
+  .zoom-img:hover {
+    transform: scale(1.05);
+  }
+
+  .logo {
+height: 120px;
+width: auto;
+  }
+
+  .coming-soon {
+  background: #f5f0e8; /* Soft beige to match your theme */
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.coming-soon h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.coming-soon p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.coming-soon {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+</style>
+
+
+</body>
+</html>
+
+
+  <header>
+    <img src="Mosaditshwene_logo_white.png" alt="MosadiTshwene Logo" class="logo">
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to MosadiTshwene Villa</h1>
+  </section>
+
+<section class="coming-soon">
+  <h2>Coming Soon</h2>
+  <p>MosadiTshwene Villa is almost ready to welcome you!  
+     Our luxury villa will be available for bookings once construction is complete.  
+     Stay tuned for updates and the official launch.</p>
+</section>
+
+
+  <section class="section" id="about">
+    <section class="fade-in">
+  <!--<p>MosadiTshwene Villa is a luxury retreat in Kanye, Botswana — born from the inspiring journey of Neo Seate, a seasoned security adviser at Debswana and an award-winning horticulture farmer. Featured in newspapers and TV shows, she supplies retailers like Pick n Pay and Food Lovers Market while raising a beautiful family. This villa, rooted in her values of <strong>Growth</strong>, <strong>Endurance</strong>, and <strong>Versatility</strong>, offers a tranquil yet elegant escape for guests seeking comfort, connection, and celebration.</p>  -->
+</section>
+    <h2>About the Villa</h2>
+    <p>MosadiTshwene Villa is a luxury retreat in Kanye, Botswana — born from the inspiring journey of Neo Seate, a seasoned security adviser at Debswana and an award-winning horticulture farmer. Featured in newspapers and TV shows, she supplies retailers like Pick n Pay and Food Lovers Market while raising a beautiful family. This villa, rooted in her values of <strong>Growth</strong>, <strong>Endurance</strong>, and <strong>Versatility</strong>, offers a tranquil yet elegant escape for guests seeking comfort, connection, and celebration.</p>
+  </section>
+
+  <section class="section" id="rooms">
+    <section class="fade-in">
+  <!-- Your content -->
+</section>
+    <h2>Rooms</h2>
+    <p>The villa features 4 en-suite bedrooms, including a master suite with a walk-in closet. Each upstairs room has a private balcony. Guests enjoy a sunken lounge, private lounge, pyjama lounge, office, a fully equipped kitchen, double garage, and a stunning upstairs balcony/garden perfect for events. A pool is coming soon.</p>
+    <div class="gallery">
+      <img src="bathroom.webp" alt="Villa photo" class="zoom-img" />
+      <img src="sunkenpit.webp" alt="Master Suite" class="zoom-img">
+      <img src="Bedroom_mosaditshwene 1.jpg" alt="bedroom 1" class="zoom-img">
+      <img src="Bedroom_mosaditshwene 2.jpg" alt="bedroom 2" class="zoom-img">
+      <img src="Bedroom_mosaditshwene 3.jpg" alt="badroom 3" class="zoom-img">
+      <img src="Bedroom_mosaditshwene 4.jpg" alt="bedroom 4" class="zoom-img">
+
+      <!-- You can add more room images here -->
+    </div>
+  </section>
+
+<!-- Amenities Section -->
+<section class="amenities fade-in">
+  <h2>Amenities</h2>
+  <div class="amenities-grid">
+    <div class="amenity">
+      <img src="bedroom.png" alt="4 En-Suite Bedrooms">
+      <p>4 En-Suite Bedrooms</p>
+    </div>
+    <div class="amenity">
+      <img src="lounge_icon.png" alt="Sunken & Private Lounges">
+      <p>Sunken & Private Lounges</p>
+    </div>
+    <div class="amenity">
+      <img src="kitchen.png" alt="Fully Equipped Kitchen">
+      <p>Fully Equipped Kitchen</p>
+    </div>
+    <div class="amenity">
+      <img src="working-on-office-icon.png" alt="Office Space">
+      <p>Office Space</p>
+    </div>
+    <div class="amenity">
+      <img src="swimming-pool-2711.png" alt="Swimming Pool (Coming Soon)">
+      <p>Swimming Pool (Coming Soon)</p>
+    </div>
+    <div class="amenity">
+      <img src="balcony.png" alt="Upstairs Garden & Balcony">
+      <p>Upstairs Garden & Balcony</p>
+    </div>
+    <div class="amenity">
+      <img src="wifi.png" alt="Free WiFi">
+      <p>Free WiFi</p>
+    </div>
+    <div class="amenity">
+      <img src="gardening.png" alt="Garden">
+      <p>Garden</p>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Fade-in effect */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Amenities Section */
+.amenities {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f9f9f9;
+}
+.amenities h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.amenity img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+.amenity p {
+  font-size: 1rem;
+  color: #555;
+}
+</style>
+
+   
+  <section class="section" id="gallery">
+    <section class="fade-in">
+  <!-- Your content -->
+</section>
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="villa.jpg" alt="Villa Exterior" class="zoom-img">
+      <img src="bathroom.webp" alt="Villa photo" class="zoom-img" />
+      <img src="kitchen.jpg" alt="Bathroom & Closet" class="zoom-img">
+      <img src="upstairsgarden.jpeg" alt="upstairsgarden" class="zoom-img">
+      <img src="pool.jpg" alt="pool" class="zoom-img">
+      <img src="garden.jpg" alt="garden" class="zoom-img">
+  
+      <!-- Add other gallery images here -->
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <section class="fade-in">
+  <!-- Your content -->
+</section>
+    <h2>Book Your Stay</h2>
+    <p>Ready to relax or host your next event? Reach out via WhatsApp or email to secure your dates.</p>
+    <p><strong>Location:</strong> Kanye, Ntsweng Ward, Botswana</p>
+    <p><strong>Email:</strong> seateletlotloleo@gmail.com</p>
+    <p><strong>WhatsApp:</strong> +267 77073301</p>
+    <a href="https://wa.me/26777073301" class="button">Book on WhatsApp</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MosadiTshwene Villa | Growth. Endurance. Versatility.</p>
+  </footer>
+  <button id="backToTop" title="Go to top">↑</button>
+</body>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const faders = document.querySelectorAll(".fade-in");
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  });
+</script>
+
+</html>
